@@ -1,11 +1,113 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tipo de Formulários HTML</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
+
+    <!--                           == FORMULÁRIOS ==
+
+        * São utilizados para coletar dados dos usuários, como informações de login, detalhes de contato, pesquisas, entre outros.
+
+        * Para criar um Formulário, utilizamos a tag <FORM>. Dentro dela, incluímos diversos elementos, como campo de texto, caixa de seleção, botões, etc.
+
+        Dentro dela pode ter alguns atributos:
+
+            * action: Especifica a URL para onde os dados do formulário serão enviados.
+
+            * method: Define que ação deve ser executada com as informações (geralmente GET ou POST).
+
+                GET: Utilize quando estiver realizando uma requisição que não altera o estado do servidor, como solicitações de busca, navegação entre páginas, etc.
+        
+                POST: Utilize quando estiver realizando uma requisição que altera o estado do servidor, como envio de formulários de cadastro, login, atualização de dados ou envio de arquivos.
+        
+            == PRINCIPAIS TAGS == 
+
+        <input>: Utilizado para criar diferentes tipos de campos de entrada.
+
+            * type: Define o tipo de entrada (text, email, password, submit, etc.).
+
+            * name: Atribui um nome ao campo, usado para identificar os dados no servidor.
+
+            * id: Usado para associar rótulos (<label>) aos campos.
+
+        <label>: Descreve o propósito de um campo de entrada.
+            for: Associa o rótulo a um campo de entrada pelo seu id. 
+============================================================================= -->
+
+<h1>Tipos de Formulários em HTML</h1>
+<!-- Cadastrar os atributos do Formulário. -->
+ <form action="dado.php" method="post">
+
+    <div>
+        <label for="nome">Nome:</label>
+        <input type="text" name="nome" id="nome">
+    </div>
+
+    <!-- Atributo Name e For -->
+     <div>
+        <label for="idade">Idade:</label>
+        <input type="text" name="idade">
+     </div>
+
+     <!-- Tag Select -->
+      <div>
+        <label for="trabalho">Selecione sua profissão:</label>
+        <select name="trabalho" id="trabalho">
+            <option value="programador">Programador</option>
+            <option value="cozinheiro">Cozinheiro</option>
+            <option value="vasp">VASP</option>
+        </select>
+      </div>
+
+      <!-- Atributo Selected -->
+       <div>
+        <label for="contrato">Você leu os termos do contrato?</label>
+        <select name="contrato" id="contrato">
+            <option value="sim">SIM</option>
+            <option value="nao" selected>NÃO</option>
+        </select>
+       </div>
+
+       <!-- Atributo Multiple (Múltiplas Seleções) -->
+        <div>
+            <label for="ingredientes">Selecione os ingredientes para fazer o seu lanche:</label>
+            <select name="ingredientes" id="ingredientes" multiple>
+                <option value="hamburguer">Hamburguer</option>
+                <option value="queijo">Queijo</option>
+                <option value="alface">Alface</option>
+                <option value="molho">Molho Especial</option>
+                <option value="cebola">Cebola</option>
+                <option value="picles">Pícles</option>
+                <option value="pao">Pão com Gergelim</option>
+            </select>
+        </div>
+
+        <!-- Tag textarea -->
+         <div>
+            <label for="comentario">Comente aqui em poucas palavras o que achou do vídeo?</label>
+            <textarea name="comentario" id="comentario"></textarea>
+         </div>
+
+         <!-- Tag Fildset -->
+          <!-- Tag Legend: É como uma label, que descreve os inputs agrupados. -->
+           <fieldset>
+            <legend>Vamos falar sério agora. Qual o seu nome de verdade?</legend>
+
+            <label for="primeiroNome">Primeiro Nome:</label>
+            <input type="text" name="primeiroNome">
+
+            <label for="sobrenome">Sobrenome:</label>
+            <input type="text" name="sobrenome">
+           </fieldset>
+
+ </form>
+
 </body>
+
 </html>
