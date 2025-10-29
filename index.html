@@ -201,7 +201,26 @@
             <input type="text" name="name" id="name" value="não precisa preencher" disabled>
           </div>
 
+         <!-- ATIBUTO PLACEHOLDER - é um texto temporário exibido em um campo de formulário ou área de texto antes que o usuário insira um valor. Ele serve como uma dica visual para o usuário sobre o tipo de informação esperada naquele campo.  -->
+          <div>
+            <label for="nome">Nome do Aluno:</label>
+            <input type="text" name="nome" id="nome" placeholder="Digite aqui o nome completo do aluno.">
+          </div> 
+
+          <!-- Atributo Required: É um tipo de validação em HTML. -->
+          <div>
+            <label for="aniversrio">*Ano de Nascimento</label>
+            <input type="date" name="aniversario" id="aniversario" required>
+          </div>
+
+          <!-- Botão de Envio -->
+           <input type="submit" value="Enviar Formulário">
+
+           <!-- Botão de Reset -->
+            <input type="reset" value="Limpar Formulário">
+
     </form>
+    <p>Campos que possuem um (*) são campos obrigatórios.</p>
 
 </body>
 
