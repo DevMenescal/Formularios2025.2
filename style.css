@@ -21,3 +21,13 @@ textarea{
 fieldset{
     margin-bottom: 20px;
 }
+
+div input,
+div label{
+    display: block;
+}
+
+.radio label,
+.radio input{
+    display: inline-block;
+}
